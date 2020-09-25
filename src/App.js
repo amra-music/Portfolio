@@ -12,17 +12,19 @@ import Footer from './components/Footer.js';
 function App() {
   return (
     <React.Fragment>
+      <div className='page-container'>
         <Router>
-          <NavigationBar/>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/about" component={About} />
-              <Route path="/contact" component={Contact} />
-            </Switch>
-            <Footer/>
+          <NavigationBar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
+          <Footer />
         </Router>
-      </React.Fragment>
-    );
+      </div>
+    </React.Fragment>
+  );
 }
 
 export default App;

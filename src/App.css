@@ -1,7 +1,19 @@
-.nesto {
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.content-wrap {
+    flex: 1 0 auto;  /* Footer height */
+  }
+  
+.footer {
+    flex-shrink: 0;
     color: #3B4358;
-    background-color:#DFE0E0; 
-}
+    background-color:#DFE0E0;            /* Footer height */
+  }
 
 .jumbotron {
     background-color: #D0826F;
