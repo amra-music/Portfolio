@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiFillFacebook, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { Button } from 'react-bootstrap';
-import Pdf from './Resume.pdf';
+import Pdf from './assets/Resume.pdf';
 
 function About() {
     return (
