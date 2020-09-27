@@ -8,7 +8,7 @@ function footer() {
         <div className='footer-content-title'>GET IN TOUCH</div>
         <div className='contact-container'>
           <div>Call me at +387 61-079-824</div>
-          <a class="white-nav-link" target="_blank" rel="noopener noreferrer" href="mailto:amusic5@etf.unsa.ba">amusic5@etf.unsa.ba</a>
+          <a className='social-link' target="_blank" rel="noopener noreferrer" href="mailto:amusic5@etf.unsa.ba">amusic5@etf.unsa.ba</a>
         </div>
       </div>
       <div className='footer-content'>
@@ -28,7 +28,7 @@ function footer() {
       <div class="break"></div>
       <div className='footer-content' style={{ marginLeft: "auto" }}>
         <div className="footer-copyright">
-          &copy;{new Date().getFullYear()} <a href="https://github.com/amra-music">Amra Musić</a>. All rights reserved.
+          &copy;{new Date().getFullYear()} <a className='social-link' href="https://github.com/amra-music">Amra Musić</a>. All rights reserved.
       </div>
       </div>
     </div>

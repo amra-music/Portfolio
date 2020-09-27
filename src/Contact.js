@@ -7,7 +7,7 @@ function Contact() {
         <div className='content-wrap, contact-page'>
                 <div className='contact-title'>Contact</div>
                 <div className='grey-line'></div>
-                <form id="contact-form" /*onSubmit={this.handleSubmit.bind(this)} method="POST"*/>
+                <form id="contact-form">
                     <Form.Group>
                         <Form.Label>Name</Form.Label>
                         <Form.Control type="text" placeholder="Enter name"></Form.Control>
