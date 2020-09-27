@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiFillFacebook, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { Button } from 'react-bootstrap';
+import Pdf from './Resume.pdf';
 
 function About() {
     return (
@@ -27,7 +28,7 @@ the Faculty of Electrical Engineering in Sarajevo. I learned a lot of tools and 
                     </a>
                 </div>
             </div>
-            <Button variant="dark" className='resumeBtn' type="submit">
+            <Button variant="dark" className='resumeBtn' type="submit" href = {Pdf} target = "_blank">
                 See My Resume
             </Button>
         </div>
