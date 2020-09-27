@@ -1,18 +1,17 @@
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
-import styled from 'styled-components';
-import boatImage from '../assets/boatImage.jpg';
+import { FaSmileWink } from "react-icons/fa";
+
 
 
 function Jumbo() {
     return (
             <Jumbotron fluid>
                 <Container>
-                    <h1>Fluid jumbotron</h1>
-                    <p>
-                        This is a modified jumbotron that occupies the entire horizontal space of
-                        its parent.
+                    <h2 className='jumbotron-title'>I'm Amra. I'm learning React by making this website, but feel free to look at my other projects and meet me <FaSmileWink/></h2>
+                    <p className='jumbotron-cite'>
+                    “Always remember that you’re unique. Just like everyone else.”
                     </p>
                 </Container>
             </Jumbotron>
