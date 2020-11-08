@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
 var cors = require('cors');
-const creds = require('./src/config');
+const creds = require('./config');
 
 var transport = {
     host: 'smtp.gmail.com', // Don’t forget to replace with the SMTP host of your provider
@@ -34,7 +34,7 @@ router.post('/send', (req, res) => {
 
   var mail = {
     from: email,
-    to: 'musicamra041@gmail.com',  // Change to email address that you want to receive messages on
+    to: creds.USER,  // Change to email address that you want to receive messages on
     subject: subject,
     text: content
   }

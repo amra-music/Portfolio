@@ -1,5 +1,5 @@
 {
-  "name": "my_portofolio_app",
+  "name": "my_portofolio_app_frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,10 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.2",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
     "framer-motion": "^2.6.15",
-    "nodemailer": "^6.4.15",
     "react": "^16.13.1",
     "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
@@ -41,10 +38,10 @@
       "last 1 safari version"
     ]
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "Frontend for my portofolio app",
   "main": "index.js",
   "devDependencies": {},
   "keywords": [],
-  "author": "",
+  "author": "Amra Musić",
   "license": "ISC"
 }
