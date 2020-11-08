@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Backend for my portofolio app",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/amra-music/Portofolio"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,5 +17,8 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "nodemailer": "^6.4.15"
+  },
+  "engines": {
+    "node": ">=12.0.0"
   }
 }
