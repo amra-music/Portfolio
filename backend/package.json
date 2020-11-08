@@ -8,6 +8,7 @@
     "url": "git://github.com/amra-music/Portofolio"
   },
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Amra Musić",
