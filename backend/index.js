@@ -6,9 +6,9 @@ var cors = require('cors');
 const creds = require('./config');
 
 var transport = {
-    host: 'smtp.gmail.com', // Don’t forget to replace with the SMTP host of your provider
-    port: 587,
-    auth: {
+  host: 'smtp.gmail.com', // Don’t forget to replace with the SMTP host of your provider
+  port: 587,
+  auth: {
     user: creds.USER,
     pass: creds.PASS
   }
@@ -23,6 +23,10 @@ transporter.verify((error, success) => {
     console.log('Server is ready to take messages');
   }
 });
+
+router.get('/', (req, res) => {
+  res.send("App is live");
+})
 
 router.post('/send', (req, res) => {
   var name = req.body.name;
@@ -46,7 +50,7 @@ router.post('/send', (req, res) => {
       })
     } else {
       res.json({
-       status: 'success'
+        status: 'success'
       })
     }
   })
