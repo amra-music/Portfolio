@@ -15,7 +15,7 @@ const Contact = () => {
         e.preventDefault();
         axios({
             method: "POST",
-            url: "http://localhost:3002/send",
+            url: process.env.REACT_APP_HOST_URL + "/send",
             data: { name, email, subject, message }
         }).then((response) => {
             if (response.data.status === 'success') {
