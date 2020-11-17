@@ -227,12 +227,10 @@ span:before {
   justify-content: space-evenly;
 }
 
-.card{
-  margin-bottom: 10px;
-}
-
- /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ /* The flip card container - set the width and height to whatever you want. 
+ We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
  .card {
+  margin-bottom: 10px;
   background-color: transparent;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   border: white;
@@ -264,26 +262,32 @@ span:before {
 }
 
 /* Style the front side (fallback if image is missing) */
-.card-front {
-
-  }
 
 /* Style the back side */
-.card-back {
-  background-color: #051A3C;
-  color: white;
+.card-back{
   transform: rotateY(180deg);
   display: flex;
   align-items: center;
 }
 
 .flip-card-link{
-color:rgba(216, 216, 11, 0.678);;
-font-size: xx-large;
-text-decoration: none;
+  font-size: xx-large;
+  text-decoration: none;
 }
 
 .flip-card-link:hover{
   text-decoration: none;
-  color:rgba(216, 216, 11, 0.678);
+}
+
+.card-back-battleship {
+  background-color: #47A3B5;
+  color: #072044;
+}
+
+.flip-card-link-battleship{
+color:#072044;
+}
+
+.flip-card-link-battleship:hover{
+  color:#011025;
 }
