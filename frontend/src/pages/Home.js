@@ -1,7 +1,7 @@
 import React from 'react';
-import Jumbo from './components/Jumbo.js';
-import Layout from './components/Layout.js';
-import CardProject from './components/CardProject.js';
+import Jumbo from '../components/Jumbo.js';
+import Layout from '../components/Layout.js';
+import CardProject from '../components/CardProject.js';
 
 function Home() {
     return (

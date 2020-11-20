@@ -23,17 +23,17 @@ function NavigationBar() {
           <Nav className="ml-auto">
             <Nav.Item>
               <Nav.Link>
-                <Link to="/">Home</Link>
+                <Link className='navigation-link' to="/">Home</Link>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link>
-                <Link to="/about">About</Link>
+                <Link className='navigation-link' to="/about">About</Link>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link>
-                <Link to="/contact">Contact</Link>
+                <Link className='navigation-link' to="/contact">Contact</Link>
               </Nav.Link>
             </Nav.Item>
           </Nav>
