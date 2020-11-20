@@ -227,16 +227,19 @@ span:before {
   justify-content: space-evenly;
 }
 
- /* The flip card container - set the width and height to whatever you want. 
+/* The flip card container - set the width and height to whatever you want. 
  We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
- .card {
+
+.card {
   margin-bottom: 10px;
   background-color: transparent;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
   border: white;
 }
 
 /* This container is needed to position the front and back side */
+
 .card-inner {
   position: relative;
   width: 100%;
@@ -247,16 +250,19 @@ span:before {
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
+
 .card:hover .card-inner {
   transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
+
 .card-front, .card-back {
   position: absolute;
   width: 500px;
   height: 285px;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
+  /* Safari */
   backface-visibility: hidden;
   border-radius: 20px;
 }
@@ -264,19 +270,29 @@ span:before {
 /* Style the front side (fallback if image is missing) */
 
 /* Style the back side */
-.card-back{
+
+.card-back {
   transform: rotateY(180deg);
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.flip-card-link{
+.framework-image {
+  border-style: solid;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.flip-card-link {
   font-size: xx-large;
   text-decoration: none;
 }
 
-.flip-card-link:hover{
+.flip-card-link:hover {
   text-decoration: none;
+  color: black;
 }
 
 .card-back-battleship {
@@ -284,10 +300,32 @@ span:before {
   color: #072044;
 }
 
-.flip-card-link-battleship{
-color:#072044;
+.flip-card-link-battleship {
+  color: #F58219;
 }
 
-.flip-card-link-battleship:hover{
-  color:#011025;
+
+.card-back-augumented {
+  background-color: #285089;
+}
+
+.flip-card-link-augumented {
+  color: #FF6D00;
+}
+
+
+.card-back-web {
+  background-color: #D2E5A3;
+}
+
+.flip-card-link-web {
+  color: #539E43;
+}
+
+.card-back-payment {
+  background-color: #EDECF1;
+}
+
+.flip-card-link-payment {
+  color: #6CB23E;
 }
