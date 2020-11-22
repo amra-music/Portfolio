@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Project3() {
+const Project1 = () => {
     return (
         <div className='content-wrap'>
-        
+
         </div>
     );
 }
 
-export default Project3;
+export default Project1;

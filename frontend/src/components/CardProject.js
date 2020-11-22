@@ -5,8 +5,12 @@ import battleship from '../assets/battleship.png';
 import augumentedReality from '../assets/augumentedReality.png';
 import web from '../assets/web.png';
 import payment from '../assets/payment.jpg';
+import augumentedAppFrameworks from '../assets/augumentedApp.png';
+import javaFx from '../assets/javaFX.png';
+import springBoot from '../assets/springBoot.png';
+import webTools from '../assets/webT.png';
 
-function cardProject() {
+const cardProject = () => {
     return (
         <div className='cards-container'>
             <Card className='card' style={{ width: 500, height: 285 }}>
@@ -15,12 +19,8 @@ function cardProject() {
                         <img alt='projectImage' src={battleship} style={{ width: '500px', height: '285px', borderRadius: 20 }} />
                     </div>
                     <div className='card-back card-back-battleship'>
-                        <Card.Body >
-                            <Link className='flip-card-link flip-card-link-battleship' to='/battleship'>Battleship</Link>
-                            <Card.Text>
-                                Desktop strategy game Battleship implemented in the JavaFX framework with AI strategies comparison.
-                    </Card.Text>
-                        </Card.Body>
+                        <Link className='flip-card-link flip-card-link-battleship' to='/battleship'>Battleship</Link>
+                        <img className='framework-image' alt='frameworks' src={javaFx} style={{ width: '100px', height: '100px' }} />
                     </div>
                 </div>
             </Card>
@@ -29,13 +29,9 @@ function cardProject() {
                     <div className='card-front'>
                         <img alt='projectImage' src={augumentedReality} style={{ width: '500px', height: '285px', borderRadius: 20 }} />
                     </div>
-                    <div className='card-back'>
-                        <Card.Body >
-                            <Link className='flip-card-link' to='/augumentedReality'>Augumented reality Taj ul</Link>
-                            <Card.Text>
-                                Android application of a Taj Ul mosque designed in a Blender and imported into Unity.
-                    </Card.Text>
-                        </Card.Body>
+                    <div className='card-back card-back-augumented'>
+                        <Link className='flip-card-link flip-card-link-augumented' to='/augumentedReality'>Augumented reality Taj ul</Link>
+                        <img className='framework-image' alt='frameworks' src={augumentedAppFrameworks} style={{ width: '300px', height: '100px' }} />
                     </div>
                 </div>
             </Card>
@@ -44,13 +40,9 @@ function cardProject() {
                     <div className='card-front'>
                         <img alt='projectImage' src={web} style={{ width: '500px', height: '285px', borderRadius: 20 }} />
                     </div>
-                    <div className='card-back'>
-                        <Card.Body >
-                            <Link className='flip-card-link' to='/webApp'>Web app</Link>
-                            <Card.Text>
-                                A web app developed for the Web technology subject at the Faculty of Electrical Engineering, Sarajevo.
-                    </Card.Text>
-                        </Card.Body>
+                    <div className='card-back card-back-web'>
+                        <Link className='flip-card-link flip-card-link-web' to='/webApp'>Web app</Link>
+                        <img className='framework-image' alt='frameworks' src={webTools} style={{ width: '300px', height: '100px' }} />
                     </div>
                 </div>
             </Card>
@@ -59,13 +51,9 @@ function cardProject() {
                     <div className='card-front'>
                         <img alt='projectImage' src={payment} style={{ width: '500px', height: '285px', borderRadius: 20 }} />
                     </div>
-                    <div className='card-back'>
-                        <Card.Body >
-                            <Link className='flip-card-link' to='/paymentServer'>Payment server</Link>
-                            <Card.Text>
-                                Payment server is one part of information system for selling and charging products and services which is a big student project.
-                    </Card.Text>
-                        </Card.Body>
+                    <div className='card-back card-back-payment'>
+                        <Link className='flip-card-link flip-card-link-payment' to='/paymentServer'>Payment server</Link>
+                        <img className='framework-image' alt='frameworks' src={springBoot} style={{ width: '200px', height: '80px' }} />
                     </div>
                 </div>
             </Card>

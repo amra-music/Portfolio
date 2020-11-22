@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Project2() {
+const Project3 = () => {
     return (
         <div className='content-wrap'>
         
@@ -8,4 +8,4 @@ function Project2() {
     );
 }
 
-export default Project2;
+export default Project3;

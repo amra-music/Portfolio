@@ -1,15 +1,17 @@
 import React from 'react';
 import { AiFillFacebook, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { Button } from 'react-bootstrap';
-import Pdf from './assets/Resume.pdf';
-import myImage from './assets/Me.jpg';
+import Pdf from '../assets/Resume.pdf';
+import myImage from '../assets/Me.jpg';
 
-function About() {
+const About = () => {
     return (
         <div className='content-wrap'>
             <div className='about-top'>
                 <div className='about-title'>About me</div>
-                <img className='about-image' alt='myImage' src={myImage} />
+                <div className='about-image-container'>
+                    <img className='about-image' alt='myImage' src={myImage} />
+                </div>
             </div>
             <div className='animation-text'>
                 <h2 className='animation'>I am <span></span></h2>

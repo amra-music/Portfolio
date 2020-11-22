@@ -11,7 +11,6 @@ const Contact = () => {
     const [message, setMessage] = useState("");
 
     const handleSubmit = (e) => {
-        console.log({ name, email, subject, message })
         e.preventDefault();
         axios({
             method: "POST",
