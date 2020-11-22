@@ -7,7 +7,7 @@ function footer() {
       <div className='footer-content'>
         <div className='footer-content-title'>GET IN TOUCH</div>
         <div className='contact-container'>
-          <div>Call me at +387 61-079-824</div>
+          <a className='social-link' target="_blank" rel="noopener noreferrer" href="tel:38761079824">Call me at +387 61-079-824</a>
           <a className='social-link' target="_blank" rel="noopener noreferrer" href="mailto:amusic5@etf.unsa.ba">amusic5@etf.unsa.ba</a>
         </div>
       </div>
