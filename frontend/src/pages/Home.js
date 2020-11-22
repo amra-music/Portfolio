@@ -3,12 +3,12 @@ import Jumbo from '../components/Jumbo.js';
 import Layout from '../components/Layout.js';
 import CardProject from '../components/CardProject.js';
 
-function Home() {
+const Home = () => {
     return (
         <div className='content-wrap'>
-            <Jumbo/>
+            <Jumbo />
             <Layout>
-            <CardProject/>
+                <CardProject />
             </Layout>
         </div>
     );

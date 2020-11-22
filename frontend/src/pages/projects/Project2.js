@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Project2() {
+const Project2 = () => {
     return (
         <div className='content-wrap'>
-        
+
         </div>
     );
 }

@@ -10,7 +10,7 @@ import javaFx from '../assets/javaFX.png';
 import springBoot from '../assets/springBoot.png';
 import webTools from '../assets/webT.png';
 
-function cardProject() {
+const cardProject = () => {
     return (
         <div className='cards-container'>
             <Card className='card' style={{ width: 500, height: 285 }}>

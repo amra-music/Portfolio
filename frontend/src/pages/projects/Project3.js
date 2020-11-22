@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Project3() {
+const Project3 = () => {
     return (
         <div className='content-wrap'>
         

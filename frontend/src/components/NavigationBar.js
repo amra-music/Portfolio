@@ -13,7 +13,7 @@ const Styles = styled.div`
   }
 `;
 
-function NavigationBar() {
+const NavigationBar = () => {
   return (
     <Styles>
       <Navbar expand="lg">

@@ -12,23 +12,23 @@ import NavigationBar from './components/NavigationBar.js';
 import Footer from './components/Footer.js';
 
 
-function App() {
+const App = () => {
   return (
-      <div className='page-container'>
-        <Router>
-          <NavigationBar />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/battleship" component={Project1}/>
-            <Route path="/webApp" component={Project2}/>
-            <Route path="/augumentedReality" component={Project3}/>
-            <Route path="/paymentServer" component={Project4}/>
-          </Switch>
-          <Footer />
-        </Router>
-      </div>
+    <div className='page-container'>
+      <Router>
+        <NavigationBar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/battleship" component={Project1} />
+          <Route path="/webApp" component={Project2} />
+          <Route path="/augumentedReality" component={Project3} />
+          <Route path="/paymentServer" component={Project4} />
+        </Switch>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 

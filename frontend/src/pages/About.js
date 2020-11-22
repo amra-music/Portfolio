@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import Pdf from '../assets/Resume.pdf';
 import myImage from '../assets/Me.jpg';
 
-function About() {
+const About = () => {
     return (
         <div className='content-wrap'>
             <div className='about-top'>

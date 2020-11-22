@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
-function footer() {
+const footer = () => {
   return (
     <div className="footer-container">
       <div className='footer-content'>
