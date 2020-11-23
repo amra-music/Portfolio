@@ -14,11 +14,21 @@
   background-size: cover;
 }
 
-.nav-link>.navigation-link {
-  color: white;
+.nav-item {
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
-.navigation-link:hover {
+.navigation-link, .navigation-brand{
+  color: white;   
+}
+
+.navigation-brand{
+  margin-top: 10px;
+  font-size: larger;
+}
+
+.navigation-link:hover, .navigation-brand:hover{
   text-decoration: none;
   color: rgba(255, 255, 255, 0.479);
 }
