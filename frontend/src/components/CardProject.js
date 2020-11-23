@@ -61,4 +61,4 @@ const CardProject = () => {
     )
 }
 
-export default cardProject;
+export default CardProject;
