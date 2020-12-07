@@ -10,22 +10,32 @@
 }
 
 .navbar {
-  background: url('./assets/boatImage.jpg') no-repeat fixed bottom;
+  background: url('./assets/starSky.jpg') no-repeat fixed bottom;
   background-size: cover;
 }
 
-.nav-link>.navigation-link {
-  color: white;
+.nav-item {
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
-.navigation-link:hover {
+.navigation-link, .navigation-brand{
+  color: white;   
+}
+
+.navigation-brand{
+  margin-top: 10px;
+  font-size: larger;
+}
+
+.navigation-link:hover, .navigation-brand:hover{
   text-decoration: none;
   color: rgba(255, 255, 255, 0.479);
 }
 
 .jumbotron {
   color: white;
-  background: url('./assets/boatImage.jpg') no-repeat fixed bottom;
+  background: url('./assets/starSky.jpg') no-repeat fixed bottom;
   background-size: cover;
 }
 

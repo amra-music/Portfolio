@@ -10,7 +10,7 @@ import javaFx from '../assets/javaFX.png';
 import springBoot from '../assets/springBoot.png';
 import webTools from '../assets/webT.png';
 
-const cardProject = () => {
+const CardProject = () => {
     return (
         <div className='cards-container'>
             <Card className='card' style={{ width: 500, height: 285 }}>
@@ -61,4 +61,4 @@ const cardProject = () => {
     )
 }
 
-export default cardProject;
+export default CardProject;
