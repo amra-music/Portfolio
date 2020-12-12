@@ -53,6 +53,21 @@
   color: rgba(248, 248, 6, 0.884);
 }
 
+/*pageNotFound*/
+
+.pageNotFoundImageWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.pageNotFound-title {
+  font-size: 100px;
+  padding-top: 20px;
+  color: #1c2c46;
+  text-align: center;
+}
+
+
 /*footer*/
 
 .break {

@@ -8,6 +8,7 @@ import Project1 from './pages/projects/Project1.js';
 import Project2 from './pages/projects/Project2.js';
 import Project3 from './pages/projects/Project3.js';
 import Project4 from './pages/projects/Project4.js';
+import PageNotFound from './pages/PageNotFound.js';
 import NavigationBar from './components/NavigationBar.js';
 import Footer from './components/Footer.js';
 
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/webApp" component={Project2} />
           <Route path="/augumentedReality" component={Project3} />
           <Route path="/paymentServer" component={Project4} />
+          <Route component={PageNotFound}/>
         </Switch>
         <Footer />
       </Router>
