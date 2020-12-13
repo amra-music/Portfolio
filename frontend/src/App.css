@@ -10,7 +10,7 @@
 }
 
 .navbar {
-  background: url('./assets/starSky.jpg') no-repeat fixed bottom;
+  background: url('https://i.imgur.com/A0XZVAL.jpg') no-repeat fixed bottom;
   background-size: cover;
 }
 
@@ -35,7 +35,7 @@
 
 .jumbotron {
   color: white;
-  background: url('./assets/starSky.jpg') no-repeat fixed bottom;
+  background: url('https://i.imgur.com/A0XZVAL.jpg') no-repeat fixed bottom;
   background-size: cover;
 }
 

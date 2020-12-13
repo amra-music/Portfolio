@@ -2,7 +2,7 @@ import React from 'react';
 import { AiFillFacebook, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { Button } from 'react-bootstrap';
 import Pdf from '../assets/Resume.pdf';
-import myImage from '../assets/Me.jpg';
+import { meImage } from '../assets/appUrls';
 
 const About = () => {
     return (
@@ -10,7 +10,7 @@ const About = () => {
             <div className='about-top'>
                 <div className='about-title'>About me</div>
                 <div className='about-image-container'>
-                    <img className='about-image' alt='myImage' src={myImage} />
+                    <img className='about-image' src={meImage}  alt='myImage' />
                 </div>
             </div>
             <div className='animation-text'>
