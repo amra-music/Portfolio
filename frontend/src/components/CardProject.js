@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
-import { augumentedRealityProjectFrameworks, augumentedRealityImage, battleshipImage, battleshipProjectFrameworks, hallScheduleImage, hallScheduleProjectFrameworks, paymentServerImage, paymentServerProjectFrameworks } from '../assets/appUrls';
+import { augumentedRealityProjectFrameworks, augumentedRealityImage, battleshipImage, battleshipProjectFrameworks, hallScheduleImage, hallScheduleProjectFrameworks, paymentServerImage, paymentServerProjectFrameworks } from 'assets/appUrls';
 
 
 

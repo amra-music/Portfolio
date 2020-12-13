@@ -1,5 +1,5 @@
 import React from 'react';
-import { pageNotFoundImage } from '../assets/appUrls';
+import { pageNotFoundImage } from 'assets/appUrls';
 
 const PageNotFound = () => {
     return (
