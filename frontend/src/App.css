@@ -9,50 +9,6 @@
   flex: 1 0 auto;
 }
 
-.navbar {
-  background: url('./assets/starSky.jpg') no-repeat fixed bottom;
-  background-size: cover;
-}
-
-.nav-item {
-  margin-top: 10px;
-  margin-right: 10px;
-}
-
-.navigation-link, .navigation-brand{
-  color: white;   
-}
-
-.navigation-brand{
-  margin-top: 10px;
-  font-size: larger;
-}
-
-.navigation-link:hover, .navigation-brand:hover{
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.479);
-}
-
-.jumbotron {
-  color: white;
-  background: url('./assets/starSky.jpg') no-repeat fixed bottom;
-  background-size: cover;
-}
-
-.jumbotron-title {
-  font-weight: bolder;
-  text-align: center;
-}
-
-.jumbotron-cite {
-  padding-top: 10px;
-  text-align: right;
-  font-size: large;
-  font-weight: bold;
-  font-style: italic;
-  color: rgba(248, 248, 6, 0.884);
-}
-
 /*pageNotFound*/
 
 .pageNotFoundImageWrap {
@@ -63,10 +19,9 @@
 .pageNotFound-title {
   font-size: 100px;
   padding-top: 20px;
-  color: #1c2c46;
+  color: var(--font-color);
   text-align: center;
 }
-
 
 /*footer*/
 
@@ -77,8 +32,8 @@
 
 .footer-container {
   flex-shrink: 0;
-  color: rgba(216, 216, 11, 0.678);
-  background-color: #162236;
+  color: var(--dark-yellow);
+  background-color: var(--dark-blue);
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -98,20 +53,19 @@
 }
 
 .social-link {
-  color: rgba(216, 216, 11, 0.678);
+  color: var(--dark-yellow);
   ;
 }
 
 .social-link:hover {
   text-decoration: none;
-  color: rgba(216, 216, 11, 0.493);
+  color: var(--darker-yellow);
 }
 
 .footer-content-title {
   font-size: x-large;
-  color: rgba(216, 216, 11, 0.678);
-  border-bottom: 1px solid rgba(216, 216, 11, 0.678);
-  ;
+  color: var(--dark-yellow);
+  border-bottom: 1px solid var(--dark-yellow);
 }
 
 /* contact page */
@@ -127,25 +81,25 @@
 
 .contact-title {
   font-size: 100px;
-  color: #1c2c46;
+  color: var(--font-color);
   text-align: center;
 }
 
 .grey-line {
-  color: rgb(189, 178, 178);
-  background-color: rgb(189, 178, 178);
+  color: var(--grey-line);
+  background-color: var(--grey-line);
   height: 1px;
   margin-bottom: 40px;
 }
 
 .btn-dark {
-  background-color: #162236;
-  border-color: #162236;
+  background-color: var(--font-color);
+  border-color: var(--font-color);
 }
 
 .btn-dark:hover {
-  background-color: #0c121d;
-  border-color: #0c121d;
+  background-color: var(--darker-blue);
+  border-color: var(--darker-blue);
 }
 
 .form-control {
@@ -160,10 +114,10 @@
 }
 
 .form-control:focus {
-  box-shadow: 0 0 5px #1c2c46;
+  box-shadow: 0 0 5px var(--font-color);
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
-  border: 1px solid #1c2c46;
+  border: 1px solid var(--font-color);
 }
 
 /*about*/
@@ -172,7 +126,7 @@
   text-align: center;
   padding-top: 20px;
   font-size: 100px;
-  color: #1c2c46;
+  color: var(--font-color);
 }
 
 .about-image-container {
@@ -194,12 +148,12 @@
 }
 
 .animation {
-  color: rgba(236, 236, 14, 0.678);
+  color: var(--animation-color);
   font-size: 3rem;
   text-align: center;
   margin-top: 4rem;
   padding-left: 1rem;
-  text-shadow: 0 2px 0 rgba(216, 185, 11, 0.527);
+  text-shadow: 0 2px 0 var(--animation-shadow);
 }
 
 span:before {
@@ -243,11 +197,11 @@ span:before {
 }
 
 .connect-link {
-  color: #1c2c46;
+  color: var(--font-color);
 }
 
 .connect-link:hover {
-  color: #0c121d;
+  color: var(--darker-blue);
 }
 
 .resumeBtn {
@@ -274,7 +228,7 @@ span:before {
   background-color: transparent;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
-  border: white;
+  border: var(--white);
 }
 
 /* This container is needed to position the front and back side */
@@ -320,7 +274,7 @@ span:before {
 
 .framework-image {
   border-style: solid;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 10px;
 }
 
@@ -331,38 +285,37 @@ span:before {
 
 .flip-card-link:hover {
   text-decoration: none;
-  color: black;
+  color: var(--black);
 }
 
 .card-back-battleship {
-  background-color: #47A3B5;
-  color: #072044;
+  background-color: var(--battleship-background);
 }
 
 .flip-card-link-battleship {
-  color: #F58219;
+  color: var(--battleship-link);
 }
 
 .card-back-augumented {
-  background-color: #285089;
+  background-color: var(--augumented-background);
 }
 
 .flip-card-link-augumented {
-  color: #FF6D00;
+  color: var(--augumented-link);
 }
 
 .card-back-web {
-  background-color: #D2E5A3;
+  background-color: var(--hall-schedule-background);
 }
 
 .flip-card-link-web {
-  color: #539E43;
+  color: var(--hall-schedule-link);
 }
 
 .card-back-payment {
-  background-color: #EDECF1;
+  background-color: var(--payment-background);
 }
 
 .flip-card-link-payment {
-  color: #6CB23E;
+  color: var(--payment-link);
 }

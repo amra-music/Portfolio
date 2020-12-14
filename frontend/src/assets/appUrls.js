@@ -1,0 +1,11 @@
+export const battleshipImage = "https://i.imgur.com/YS3rIT2.png";
+export const battleshipProjectFrameworks = "https://i.imgur.com/3wLVGBC.png";
+export const augumentedRealityImage = "https://i.imgur.com/yzqxD09.png?2";
+export const augumentedRealityProjectFrameworks = "https://i.imgur.com/VkhIO37.png?1";
+export const paymentServerImage = "https://i.imgur.com/epymVKV.jpg?1";
+export const paymentServerProjectFrameworks = "https://i.imgur.com/8K2br5o.png?1";
+export const hallScheduleImage = "https://i.imgur.com/DVqBPcx.png?1";
+export const hallScheduleProjectFrameworks = "https://i.imgur.com/MnmyxR0.png";
+export const pageNotFoundImage = "https://i.imgur.com/BrqJRCN.png";
+export const meImage = "https://i.imgur.com/rFN2uUV.jpg";
+export const jumbotronImage = "https://i.imgur.com/dqNza5j.jpg";
