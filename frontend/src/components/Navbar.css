@@ -20,14 +20,14 @@
 }
 
 .navbar-logo {
-    color: #fff;
+    color: var(--white);
     padding-left: 20px;
     font-size: 1.5rem;
 }
 
 .navbar-logo:hover {
     text-decoration: none;
-    color: rgba(216, 216, 11, 0.678);
+    color: var(--dark-yellow);
 }
 
 .nav-menu {
@@ -41,7 +41,7 @@
 }
 
 .nav-links {
-    color: #fff;
+    color: var(--white);
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
@@ -50,5 +50,5 @@
 
 .nav-links:hover {
     text-decoration: none;
-    color: rgba(216, 216, 11, 0.678);
+    color: var(--dark-yellow);
 }

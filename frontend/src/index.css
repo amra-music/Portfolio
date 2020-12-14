@@ -1,0 +1,22 @@
+:root {
+    --white: white;
+    --black: black;
+    --dark-blue: #162236;
+    --darker-blue: #0c121d;
+    --dark-yellow: rgba(216, 216, 11, 0.678);
+    --darker-yellow: rgba(216, 216, 11, 0.493);
+    --grey-line: rgb(189, 178, 178);
+    --font-color: #1c2c46;
+    --hero-cite: rgba(248, 248, 6, 0.884);
+    --animation-color: rgba(236, 236, 14, 0.678);
+    --animation-shadow: rgba(216, 185, 11, 0.527);
+    --battleship-background: #47A3B5;
+    --battleship-color1: #072044;
+    --battleship-link: #F58219;
+    --augumented-background: #285089;
+    --augumented-link: #FF6D00;
+    --hall-schedule-background: #D2E5A3;
+    --hall-schedule-link: #539E43;
+    --payment-background: #EDECF1;
+    --payment-link: #6CB23E;
+}
