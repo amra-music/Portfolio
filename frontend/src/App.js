@@ -9,15 +9,15 @@ import Project2 from 'pages/projects/Project2.js';
 import Project3 from 'pages/projects/Project3.js';
 import Project4 from 'pages/projects/Project4.js';
 import PageNotFound from 'pages/PageNotFound.js';
-import NavigationBar from 'components/NavigationBar.js';
 import Footer from 'components/Footer.js';
+import Navbar from 'components/NavBar';
 
 
 const App = () => {
   return (
     <div className='page-container'>
       <Router>
-        <NavigationBar />
+        <Navbar/>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
@@ -26,11 +26,11 @@ const App = () => {
           <Route path="/webApp" component={Project2} />
           <Route path="/augumentedReality" component={Project3} />
           <Route path="/paymentServer" component={Project4} />
-          <Route component={PageNotFound}/>
+          <Route component={PageNotFound} />
         </Switch>
         <Footer />
       </Router>
-    </div>
+    </div >
   );
 }
 

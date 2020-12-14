@@ -8,4 +8,4 @@ export const hallScheduleImage = "https://i.imgur.com/DVqBPcx.png?1";
 export const hallScheduleProjectFrameworks = "https://i.imgur.com/MnmyxR0.png";
 export const pageNotFoundImage = "https://i.imgur.com/BrqJRCN.png";
 export const meImage = "https://i.imgur.com/rFN2uUV.jpg";
-export const jumbotronImage = "https://i.imgur.com/A0XZVAL.jpg";
+export const jumbotronImage = "https://i.imgur.com/dqNza5j.jpg";

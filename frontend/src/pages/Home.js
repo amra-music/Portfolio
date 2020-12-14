@@ -1,12 +1,12 @@
 import React from 'react';
-import Jumbo from 'components/Jumbo';
 import Layout from 'components/Layout';
 import CardProject from 'components/CardProject';
+import HeroSection from 'components/HeroSection';
 
 const Home = () => {
     return (
         <div className='content-wrap'>
-            <Jumbo />
+            <HeroSection />
             <Layout>
                 <CardProject />
             </Layout>

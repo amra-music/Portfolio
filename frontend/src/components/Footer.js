@@ -25,7 +25,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div class="break"></div>
+      <div className="break"></div>
       <div className='footer-content' style={{ marginLeft: "auto" }}>
         <div className="footer-copyright">
           &copy;{new Date().getFullYear()} <a className='social-link' href="https://github.com/amra-music">Amra Musić</a>. All rights reserved.
