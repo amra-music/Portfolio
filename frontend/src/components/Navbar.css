@@ -10,7 +10,7 @@
 }
 
 .navbar.activ {
-    background-color: #162236;
+    background-color: var(--dark-blue);
 }
 
 .navbar-container {
