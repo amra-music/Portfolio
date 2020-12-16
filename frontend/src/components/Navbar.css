@@ -7,10 +7,12 @@
     position: sticky;
     top: 0;
     z-index: 999;
+    transition: background-color 0.2s;
 }
 
 .navbar.activ {
     background-color: var(--dark-blue);
+    transition: background-color 0.2s;
 }
 
 .navbar-container {

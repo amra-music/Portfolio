@@ -3,25 +3,15 @@ import { Link, withRouter } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = ({ match }) => {
-    const [navbar, setNavbar] = useState(false);
+    const [navbar, setNavbar] = useState(window.location.pathname !== "/");
 
     useEffect(() => {
-        const changeBackground = () => {
-            if (!match.isExact)
-                return
-            if (window.scrollY >= 80) {
-                setNavbar(true);
-            } else {
-                setNavbar(false);
-            }
-        }
+        const changeBackground = () => setNavbar(window.location.pathname !== "/" || window.scrollY >= 80);
+        window.addEventListener('scroll', changeBackground);
+    }, [])
 
-        if (!match.isExact)
-            window.removeEventListener('scroll', changeBackground);
-        else
-            window.addEventListener('scroll', changeBackground);
-
-        setNavbar(!match.isExact);
+    useEffect(() => {
+        setNavbar(!match.isExact || window.scrollY >= 80);
     }, [match])
 
     return (
