@@ -1,57 +1,72 @@
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
-import { augumentedRealityProjectFrameworks, augumentedRealityImage, battleshipImage, battleshipProjectFrameworks, hallScheduleImage, hallScheduleProjectFrameworks, paymentServerImage, paymentServerProjectFrameworks } from 'assets/appUrls';
+import React, { useEffect, useState } from 'react';
+import { getProjectLanguages, getProjectReadme } from 'api/project';
+import { Button } from 'react-bootstrap';
+import { getLongDateTime } from 'utilities/date';
+import './CardProject.css';
+import ReactMarkdown from 'react-markdown';
 
 
+const CardProject = ({ project }) => {
 
-const CardProject = () => {
+    const [projectLanguages, setProjectLanguages] = useState([]);
+    const [projectReadme, setProjectReadme] = useState("");
+
+    useEffect(() => {
+        const fetchData = async () => {
+            setProjectLanguages(await getProjectLanguages(project.name));
+            setProjectReadme(await getProjectReadme(project.name));
+        };
+
+        fetchData();
+    }, [project]);
+
+
     return (
-        <div className='cards-container'>
-            <Card className='card' style={{ width: 500, height: 285 }}>
-                <div className='card-inner'>
-                    <div className='card-front'>
-                        <img src={battleshipImage} alt='projectImage' style={{ width: '500px', height: '285px', borderRadius: 20 }} />
-                    </div>
-                    <div className='card-back card-back-battleship'>
-                        <Link className='flip-card-link flip-card-link-battleship' to='/battleship'>Battleship</Link>
-                        <img className='framework-image' alt='frameworks' src={battleshipProjectFrameworks} style={{ width: '100px', height: '100px' }} />
-                    </div>
+        <div className='project-container'>
+            <div className="project-title">
+                <h2>{project.name}</h2>
+                <div className="project-languages">
+                    {projectLanguages.map(listItem =>
+                        <div key={listItem[0]}>
+                            {listItem[0]}
+                        </div>
+                    )}
                 </div>
-            </Card>
-            <Card className='card' style={{ width: 500, height: 285 }}>
-                <div className='card-inner'>
-                    <div className='card-front'>
-                        <img alt='projectImage' src={augumentedRealityImage} style={{ width: '500px', height: '285px', borderRadius: 20 }} />
-                    </div>
-                    <div className='card-back card-back-augumented'>
-                        <Link className='flip-card-link flip-card-link-augumented' to='/augumentedReality'>Augumented reality Taj ul</Link>
-                        <img className='framework-image' alt='frameworks' src={augumentedRealityProjectFrameworks} style={{ width: '300px', height: '100px' }} />
-                    </div>
+            </div>
+            <div className="project-body">
+                <div className='project-readme'>
+                    <ReactMarkdown allowDangerousHtml >
+                        {atob(projectReadme)}
+                    </ReactMarkdown>
                 </div>
-            </Card>
-            <Card className='card' style={{ width: 500, height: 285 }}>
-                <div className='card-inner'>
-                    <div className='card-front'>
-                        <img alt='projectImage' src={hallScheduleImage} style={{ width: '500px', height: '285px', borderRadius: 20 }} />
+                <div className='project-details'>
+                    <div>
+                        Created:
+                        <span>
+                            {getLongDateTime(project.created_at)}
+                        </span>
                     </div>
-                    <div className='card-back card-back-web'>
-                        <Link className='flip-card-link flip-card-link-web' to='/webApp'>Web app</Link>
-                        <img className='framework-image' alt='frameworks' src={hallScheduleProjectFrameworks} style={{ width: '300px', height: '100px' }} />
+                    <div>
+                        Last updated:
+                        <span>
+                            {getLongDateTime(project.updated_at)}
+                        </span>
                     </div>
+                    {project.homepage !== '' ?
+                        <div>
+                            Link:
+                            <span>
+                                <a href={project.homepage} target='_blank' rel='noreferrer'>
+                                    {project.homepage}
+                                </a>
+                            </span>
+                        </div>
+                        : null}
+                    <Button variant='dark' href={project.html_url} target='_blank' rel='noreferrer' block >
+                        Project on github
+                    </Button>
                 </div>
-            </Card>
-            <Card className='card' style={{ width: 500, height: 285 }}>
-                <div className='card-inner'>
-                    <div className='card-front'>
-                        <img alt='projectImage' src={paymentServerImage} style={{ width: '500px', height: '285px', borderRadius: 20 }} />
-                    </div>
-                    <div className='card-back card-back-payment'>
-                        <Link className='flip-card-link flip-card-link-payment' to='/paymentServer'>Payment server</Link>
-                        <img className='framework-image' alt='frameworks' src={paymentServerProjectFrameworks} style={{ width: '200px', height: '80px' }} />
-                    </div>
-                </div>
-            </Card>
+            </div>
         </div>
     )
 }

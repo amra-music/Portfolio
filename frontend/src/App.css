@@ -156,7 +156,7 @@
   text-shadow: 0 2px 0 var(--animation-shadow);
 }
 
-span:before {
+.animation-span:before {
   content: '';
   animation: animate infinite 12s;
 }

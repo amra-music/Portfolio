@@ -1,0 +1,43 @@
+.project-container {
+    margin-bottom: 40px;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.project-languages {
+    display: flex;
+    align-items: center;
+}
+
+.project-languages>div {
+    margin-left: 40px;
+}
+
+.project-body {
+    display: flex;
+}
+
+.project-details {
+    min-width: 400px;
+    text-align: right;
+}
+
+.project-details > div {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-readme {
+    max-height: 600px;
+    overflow-y: auto;
+    margin-right: 20px;
+}
+
+.project-readme:first-child>h1 {
+    display: none;
+}
