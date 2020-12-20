@@ -11,6 +11,17 @@ const Home = () => {
     useEffect(() => {
         const fetchData = async () => {
             setProjects(await getAllProjects());
+            /*
+            const ArrowRight = <RightOutlined className="page-arrow" />;
+            <ScrollMenu
+              data={getProjects}
+              alignCenter={false}
+              arrowLeft={ArrowLeft}
+              arrowRight={ArrowRight}
+              wheel={false}
+              itemClass="res-item"
+            />
+            */
         };
         fetchData();
     }, [])

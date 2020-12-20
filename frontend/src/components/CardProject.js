@@ -41,26 +41,21 @@ const CardProject = ({ project }) => {
                 </div>
                 <div className='project-details'>
                     <div>
-                        Created:
+                        <strong>Created:</strong> 
                         <span>
                             {getLongDateTime(project.created_at)}
                         </span>
                     </div>
                     <div>
-                        Last updated:
+                        <strong>Last updated:</strong>
                         <span>
                             {getLongDateTime(project.updated_at)}
                         </span>
                     </div>
                     {project.homepage !== '' ?
-                        <div>
-                            Link:
-                            <span>
-                                <a href={project.homepage} target='_blank' rel='noreferrer'>
-                                    {project.homepage}
-                                </a>
-                            </span>
-                        </div>
+                        <Button variant='dark' href={project.homepage} target='_blank' rel='noreferrer' block >
+                            Website
+                        </Button>
                         : null}
                     <Button variant='dark' href={project.html_url} target='_blank' rel='noreferrer' block >
                         Project on github

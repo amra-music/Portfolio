@@ -22,7 +22,7 @@
 }
 
 .project-details {
-    min-width: 400px;
+    min-width: 320px;
     text-align: right;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .project-readme {
-    max-height: 600px;
+    max-height: 700px;
     overflow-y: auto;
     margin-right: 20px;
 }
