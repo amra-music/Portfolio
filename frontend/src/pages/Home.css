@@ -1,0 +1,5 @@
+.projects-spinner {
+    color: var(--dark-blue);
+    position: relative;
+    left: 49%;
+}

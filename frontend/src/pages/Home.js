@@ -3,6 +3,8 @@ import Layout from 'components/Layout';
 import CardProject from 'components/CardProject';
 import HeroSection from 'components/HeroSection';
 import { getAllProjects } from 'api/project';
+import { Spinner } from 'react-bootstrap';
+import './Home.css';
 
 const Home = () => {
 
@@ -31,10 +33,10 @@ const Home = () => {
             <HeroSection />
             <Layout>
                 {projects !== null ?
-                    <>
-                        <CardProject project={projects[0]} />
-                    </>
-                    : "Loading..."}
+                    <CardProject project={projects[0]} />
+                    :
+                    <Spinner className='projects-spinner' animation="border"></Spinner>
+                }
             </Layout>
         </div>
     );
