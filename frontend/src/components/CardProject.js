@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { getProjectLanguages, getProjectReadme } from 'api/project';
+import React from 'react';
 import { Button } from 'react-bootstrap';
 import { getLongDateTime } from 'utilities/date';
 import './CardProject.css';
@@ -8,25 +7,12 @@ import ReactMarkdown from 'react-markdown';
 
 const CardProject = ({ project }) => {
 
-    const [projectLanguages, setProjectLanguages] = useState([]);
-    const [projectReadme, setProjectReadme] = useState("");
-
-    useEffect(() => {
-        const fetchData = async () => {
-            setProjectLanguages(await getProjectLanguages(project.name));
-            setProjectReadme(await getProjectReadme(project.name));
-        };
-
-        fetchData();
-    }, [project]);
-
-
     return (
         <div className='project-container'>
             <div className="project-title">
                 <h2>{project.name}</h2>
                 <div className="project-languages">
-                    {projectLanguages.map(listItem =>
+                    {project.languages.map(listItem =>
                         <div key={listItem[0]}>
                             {listItem[0]}
                         </div>
@@ -36,7 +22,7 @@ const CardProject = ({ project }) => {
             <div className="project-body">
                 <div className='project-readme'>
                     <ReactMarkdown allowDangerousHtml >
-                        {atob(projectReadme)}
+                        {atob(project.readme)}
                     </ReactMarkdown>
                 </div>
                 <div className='project-details'>

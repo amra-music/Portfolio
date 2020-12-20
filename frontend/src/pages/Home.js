@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Layout from 'components/Layout';
 import CardProject from 'components/CardProject';
 import HeroSection from 'components/HeroSection';
-import { getAllProjects } from 'api/project';
+import { getAllProjects, getProjectLanguages, getProjectReadme } from 'api/project';
 import { Spinner } from 'react-bootstrap';
+import ScrollMenu from 'react-horizontal-scrolling-menu';
+import { RiArrowDropRightLine, RiArrowDropLeftLine } from 'react-icons/ri';
+
 import './Home.css';
 
 const Home = () => {
@@ -12,28 +15,36 @@ const Home = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            setProjects(await getAllProjects());
-            /*
-            const ArrowRight = <RightOutlined className="page-arrow" />;
-            <ScrollMenu
-              data={getProjects}
-              alignCenter={false}
-              arrowLeft={ArrowLeft}
-              arrowRight={ArrowRight}
-              wheel={false}
-              itemClass="res-item"
-            />
-            */
+            try {
+                const data = await getAllProjects();
+                for(const project of data) {
+                    project.languages = await getProjectLanguages(project.name);
+                    project.readme = await getProjectReadme(project.name);
+                }
+                setProjects(data);
+            } catch (e) {}
         };
         fetchData();
     }, [])
+
+    const getProjectsArray = () => {
+        return projects.map(project => <CardProject project={project} />);
+    }
 
     return (
         <div className='content-wrap'>
             <HeroSection />
             <Layout>
+                {console.log(projects)}
                 {projects !== null ?
-                    <CardProject project={projects[0]} />
+                    <ScrollMenu
+                        data={getProjectsArray()}
+                        alignCenter={false}
+                        arrowLeft={<RiArrowDropLeftLine />}
+                        arrowRight={<RiArrowDropRightLine />}
+                        wheel={false}
+                        itemClass="project-item"
+                    />
                     :
                     <Spinner className='projects-spinner' animation="border"></Spinner>
                 }

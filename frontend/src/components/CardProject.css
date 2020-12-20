@@ -1,5 +1,6 @@
 .project-container {
     margin-bottom: 40px;
+    width: 64.9vw;
 }
 
 .project-title {
@@ -36,6 +37,7 @@
     max-height: 700px;
     overflow-y: auto;
     margin-right: 20px;
+    width: 100%;
 }
 
 .project-readme:first-child>h1 {

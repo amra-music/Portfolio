@@ -3,3 +3,19 @@
     position: relative;
     left: 49%;
 }
+
+.scroll-menu-arrow {
+    line-height: 0;
+    font-size: 50px;
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+
+.scroll-menu-arrow:hover {
+    color: var(--arrow-hover-yellow);
+}
+
+.project-item {
+    vertical-align: top;
+    padding: 0 10px;
+}
