@@ -1,6 +1,7 @@
 import React from 'react';
-import './HeroSection.css';
 import { FaSmileWink } from "react-icons/fa";
+
+import 'components/HeroSection/HeroSection.css';
 
 const HeroSection = () => {
     return (

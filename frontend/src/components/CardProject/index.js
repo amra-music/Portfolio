@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { getLongDateTime } from 'utilities/date';
-import './CardProject.css';
 import ReactMarkdown from 'react-markdown';
 
+import 'components/CardProject/CardProject.css';
 
 const CardProject = ({ key, project }) => {
 

@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import Pdf from 'assets/Resume.pdf';
 import { meImage } from 'assets/appUrls';
 
-import './About.css'
+import 'pages/About/About.css'
 
 const About = () => {
     return (

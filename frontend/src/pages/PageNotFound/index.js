@@ -1,7 +1,7 @@
 import React from 'react';
 import { pageNotFoundImage } from 'assets/appUrls';
 
-import './PageNotFound.css'
+import 'pages/PageNotFound/PageNotFound.css'
 
 const PageNotFound = () => {
     return (

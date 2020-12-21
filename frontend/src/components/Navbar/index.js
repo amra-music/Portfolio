@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import './Navbar.css';
+
+import 'components/Navbar/Navbar.css';
 
 const Navbar = ({ match }) => {
     const [navbar, setNavbar] = useState(window.location.pathname !== "/");
