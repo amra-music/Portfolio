@@ -14,15 +14,17 @@
 }
 
 .project-item {
-    vertical-align: top;
-    padding: 0 10px;
+    /*
     max-width: calc(100vw - 310px);
     min-width: calc(100vw - 310px);
+    padding: 0 10px;
+    */
+    vertical-align: top;
 }
 
 .menu-container {
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 105.5px;
+    padding-left: 105.5px;
 }
 
 @media (max-width: 575px) {

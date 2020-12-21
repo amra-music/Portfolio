@@ -29,7 +29,7 @@ const Home = () => {
     }, [])
 
     const getProjectsArray = () => {
-        return projects.map(project => <CardProject project={project} />);
+        return projects.map(project => <CardProject key={project.id} project={project} />);
     }
 
     return (
@@ -44,6 +44,8 @@ const Home = () => {
                     wheel={false}
                     itemClass="project-item"
                     menuClass="menu-container"
+                    disableTabindex
+                    scrollBy={1}
                 />
                 :
                 <Spinner className='projects-spinner' animation="border"></Spinner>

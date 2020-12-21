@@ -5,7 +5,7 @@ import './CardProject.css';
 import ReactMarkdown from 'react-markdown';
 
 
-const CardProject = ({ project }) => {
+const CardProject = ({ key, project }) => {
 
     return (
         <div className='project-container'>
