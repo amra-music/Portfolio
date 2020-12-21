@@ -1,0 +1,37 @@
+.projects-spinner {
+    color: var(--dark-blue);
+}
+
+.scroll-menu-arrow {
+    line-height: 0;
+    font-size: 50px;
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+
+.scroll-menu-arrow:hover {
+    color: var(--arrow-hover-yellow);
+}
+
+.project-item {
+    vertical-align: top;
+    padding: 0 10px;
+    max-width: calc(100vw - 310px);
+    min-width: calc(100vw - 310px);
+}
+
+.menu-container {
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+@media (max-width: 575px) {
+    .menu-container {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .project-item {
+        max-width: calc(100vw - 145px);
+        min-width: calc(100vw - 145px);
+    }
+}

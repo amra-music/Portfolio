@@ -1,6 +1,8 @@
 import React from 'react';
 import { pageNotFoundImage } from 'assets/appUrls';
 
+import './PageNotFound.css'
+
 const PageNotFound = () => {
     return (
         <div className='content-wrap'>

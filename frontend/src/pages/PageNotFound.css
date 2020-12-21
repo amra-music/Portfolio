@@ -1,0 +1,11 @@
+.pageNotFoundImageWrap {
+    display: flex;
+    justify-content: center;
+}
+
+.pageNotFound-title {
+    font-size: min(10vw, 100px);
+    padding-top: 20px;
+    color: var(--font-color);
+    text-align: center;
+}

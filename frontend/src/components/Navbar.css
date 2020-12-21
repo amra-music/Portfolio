@@ -1,16 +1,17 @@
 .navbar {
     background-color: transparent;
-    height: 60px;
     display: flex;
     align-items: center;
     font-size: 1.2rem;
     position: sticky;
     top: 0;
     z-index: 999;
+    transition: background-color 0.2s;
 }
 
 .navbar.activ {
-    background-color: #162236;
+    background-color: var(--dark-blue);
+    transition: background-color 0.2s;
 }
 
 .navbar-container {
@@ -35,7 +36,6 @@
     grid-template-columns: repeat(4, auto);
     list-style: none;
     text-align: center;
-    width: 85vw;
     justify-content: end;
     margin-bottom: 0;
 }
@@ -51,4 +51,13 @@
 .nav-links:hover {
     text-decoration: none;
     color: var(--dark-yellow);
+}
+
+@media (max-width: 575px) {
+    .nav-links {
+        padding: 0.5rem 0.5rem;
+    }
+    .navbar-logo {
+        padding-left: 10px;
+    }
 }

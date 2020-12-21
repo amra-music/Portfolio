@@ -3,41 +3,31 @@ import { Link, withRouter } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = ({ match }) => {
-    const [navbar, setNavbar] = useState(false);
+    const [navbar, setNavbar] = useState(window.location.pathname !== "/");
 
     useEffect(() => {
-        const changeBackground = () => {
-            if (!match.isExact)
-                return
-            if (window.scrollY >= 80) {
-                setNavbar(true);
-            } else {
-                setNavbar(false);
-            }
-        }
+        const changeBackground = () => setNavbar(window.location.pathname !== "/" || window.scrollY >= 80);
+        window.addEventListener('scroll', changeBackground);
+    }, [])
 
-        if (!match.isExact)
-            window.removeEventListener('scroll', changeBackground);
-        else
-            window.addEventListener('scroll', changeBackground);
-
-        setNavbar(!match.isExact);
+    useEffect(() => {
+        setNavbar(!match.isExact || window.scrollY >= 80);
     }, [match])
 
     return (
         <nav className={navbar ? 'navbar activ' : 'navbar'}>
             <Link to='/' className='navbar-logo'>Amra Musić</Link>
-            <ul className='nav-menu'>
-                <li className='nav-item'>
+            <div className='nav-menu'>
+                <div className='nav-item'>
                     <Link to='/' className='nav-links'>Home</Link>
-                </li>
-                <li className='nav-item'>
+                </div>
+                <div className='nav-item'>
                     <Link to='/about' className='nav-links'>About</Link>
-                </li>
-                <li className='nav-item'>
+                </div>
+                <div className='nav-item'>
                     <Link to='/contact' className='nav-links'>Contact</Link>
-                </li>
-            </ul>
+                </div>
+            </div>
         </nav>
     );
 }
