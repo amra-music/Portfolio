@@ -3,8 +3,7 @@ import CardProject from 'components/CardProject';
 import HeroSection from 'components/HeroSection';
 import { getAllProjects, getProjectLanguages, getProjectReadme } from 'api/project';
 import { Spinner } from 'react-bootstrap';
-import ScrollMenu from 'react-horizontal-scrolling-menu';
-import { RiArrowDropRightLine, RiArrowDropLeftLine } from 'react-icons/ri';
+import ScrollMenu from 'components/ScrollMenu';
 
 import './Home.css';
 
@@ -36,17 +35,7 @@ const Home = () => {
         <div className='content-wrap'>
             <HeroSection />
             {projects !== null ?
-                <ScrollMenu
-                    data={getProjectsArray()}
-                    alignCenter={false}
-                    arrowLeft={<RiArrowDropLeftLine />}
-                    arrowRight={<RiArrowDropRightLine />}
-                    wheel={false}
-                    itemClass="project-item"
-                    menuClass="menu-container"
-                    disableTabindex
-                    scrollBy={1}
-                />
+                <ScrollMenu projects={getProjectsArray()} />
                 :
                 <Spinner className='projects-spinner' animation="border"></Spinner>
             }
