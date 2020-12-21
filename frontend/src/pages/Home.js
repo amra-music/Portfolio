@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Layout from 'components/Layout';
 import CardProject from 'components/CardProject';
 import HeroSection from 'components/HeroSection';
 import { getAllProjects, getProjectLanguages, getProjectReadme } from 'api/project';
@@ -17,12 +16,14 @@ const Home = () => {
         const fetchData = async () => {
             try {
                 const data = await getAllProjects();
-                for(const project of data) {
-                    project.languages = await getProjectLanguages(project.name);
-                    project.readme = await getProjectReadme(project.name);
+                for (const project of data) {
+                    try {
+                        project.languages = await getProjectLanguages(project.name);
+                        project.readme = await getProjectReadme(project.name);
+                    } catch (e) { }
                 }
                 setProjects(data);
-            } catch (e) {}
+            } catch (e) { }
         };
         fetchData();
     }, [])
@@ -34,21 +35,19 @@ const Home = () => {
     return (
         <div className='content-wrap'>
             <HeroSection />
-            <Layout>
-                {console.log(projects)}
-                {projects !== null ?
-                    <ScrollMenu
-                        data={getProjectsArray()}
-                        alignCenter={false}
-                        arrowLeft={<RiArrowDropLeftLine />}
-                        arrowRight={<RiArrowDropRightLine />}
-                        wheel={false}
-                        itemClass="project-item"
-                    />
-                    :
-                    <Spinner className='projects-spinner' animation="border"></Spinner>
-                }
-            </Layout>
+            {projects !== null ?
+                <ScrollMenu
+                    data={getProjectsArray()}
+                    alignCenter={false}
+                    arrowLeft={<RiArrowDropLeftLine />}
+                    arrowRight={<RiArrowDropRightLine />}
+                    wheel={false}
+                    itemClass="project-item"
+                    menuClass="menu-container"
+                />
+                :
+                <Spinner className='projects-spinner' animation="border"></Spinner>
+            }
         </div>
     );
 }

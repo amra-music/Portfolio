@@ -1,0 +1,92 @@
+.about-title {
+    text-align: center;
+    padding-top: 20px;
+    font-size: min(10vw,100px);
+    color: var(--font-color);
+}
+
+.about-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.about-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: right;
+}
+
+.animation-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.animation {
+    color: var(--animation-color);
+    font-size: min(8vw,3rem);
+    text-align: center;
+    margin-top: 4rem;
+    padding-left: 1rem;
+    text-shadow: 0 2px 0 var(--animation-shadow);
+}
+
+.animation-span:before {
+    content: '';
+    animation: animate infinite 12s;
+}
+
+@keyframes animate {
+    0% {
+        content: 'a Developer';
+    }
+    33% {
+        content: 'a Bookworm';
+    }
+    66% {
+        content: 'an Engineer';
+    }
+    100% {
+        content: 'a Travel lover';
+    }
+}
+
+.about-text {
+    text-align: center;
+    padding: 20px 150px;
+}
+
+.about-interested {
+    text-align: center;
+    font-size: x-large;
+}
+
+.about-connect {
+    text-align: center;
+    font-size: x-large;
+}
+
+.about-social-conteiner {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.connect-link {
+    color: var(--font-color);
+}
+
+.connect-link:hover {
+    color: var(--darker-blue);
+}
+
+.resumeBtn {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 575px) {
+    .about-text {
+        padding: 20px 100px;
+    }
+}

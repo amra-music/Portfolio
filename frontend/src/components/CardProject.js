@@ -38,7 +38,7 @@ const CardProject = ({ project }) => {
                             {getLongDateTime(project.updated_at)}
                         </span>
                     </div>
-                    {project.homepage !== '' ?
+                    {project.homepage !== null && project.homepage !== '' ?
                         <Button variant='dark' href={project.homepage} target='_blank' rel='noreferrer' block >
                             Website
                         </Button>

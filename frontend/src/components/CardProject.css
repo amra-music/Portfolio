@@ -1,6 +1,5 @@
 .project-container {
     margin-bottom: 40px;
-    width: 64.9vw;
 }
 
 .project-title {
@@ -20,6 +19,7 @@
 
 .project-body {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .project-details {
@@ -37,7 +37,8 @@
     max-height: 700px;
     overflow-y: auto;
     margin-right: 20px;
-    width: 100%;
+    width: calc(100vw - 670px);
+    min-width: 400px;
 }
 
 .project-readme:first-child>h1 {

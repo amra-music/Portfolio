@@ -27,14 +27,22 @@
   color: var(--white);
   font-weight: bolder;
   text-shadow: 4px 4px 4px var(--black);
+  font-size: min(3.5vw, 2rem);
 }
 
 .hero-cite {
   padding-top: 10px;
   text-align: right;
-  font-size: larger;
+  font-size: min(2.5vw, 1rem);
   font-weight: bold;
   font-style: italic;
   color: var(--hero-cite);
   text-shadow: 4px 4px 4px var(--black);
+}
+
+@media (max-width: 767px) {
+  .hero-container {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
 }
