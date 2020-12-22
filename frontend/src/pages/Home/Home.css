@@ -4,21 +4,18 @@
 
 .scroll-menu-arrow {
     line-height: 0;
-    font-size: 50px;
+    font-size: 64px;
     cursor: pointer;
     color: var(--dark-blue);
+    position: absolute;
+    margin-top: -10px;
 }
 
 .scroll-menu-arrow:hover {
-    color: var(--arrow-hover-yellow);
+    color: var(--battleship-background);
 }
 
 .project-item {
-    /*
-    max-width: calc(100vw - 310px);
-    min-width: calc(100vw - 310px);
-    padding: 0 10px;
-    */
     vertical-align: top;
 }
 

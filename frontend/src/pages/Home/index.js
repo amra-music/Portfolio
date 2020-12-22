@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import CardProject from 'components/CardProject';
-import HeroSection from 'components/HeroSection';
+import CardProject from 'components/CardProject/index';
+import HeroSection from 'components/HeroSection/index';
 import { getAllProjects, getProjectLanguages, getProjectReadme } from 'api/project';
 import { Spinner } from 'react-bootstrap';
-import ScrollMenu from 'react-horizontal-scrolling-menu';
-import { RiArrowDropRightLine, RiArrowDropLeftLine } from 'react-icons/ri';
+import ScrollMenu from 'components/ScrollMenu/index';
 
-import './Home.css';
+import 'pages/Home/Home.css';
 
 const Home = () => {
 
@@ -18,7 +17,7 @@ const Home = () => {
                 const data = await getAllProjects();
                 for (const project of data) {
                     try {
-                        project.languages = await getProjectLanguages(project.name);
+                        project.languages = await getProjectLanguages(project.name);                          
                         project.readme = await getProjectReadme(project.name);
                     } catch (e) { }
                 }
@@ -36,17 +35,7 @@ const Home = () => {
         <div className='content-wrap'>
             <HeroSection />
             {projects !== null ?
-                <ScrollMenu
-                    data={getProjectsArray()}
-                    alignCenter={false}
-                    arrowLeft={<RiArrowDropLeftLine />}
-                    arrowRight={<RiArrowDropRightLine />}
-                    wheel={false}
-                    itemClass="project-item"
-                    menuClass="menu-container"
-                    disableTabindex
-                    scrollBy={1}
-                />
+                <ScrollMenu projects={getProjectsArray()} />
                 :
                 <Spinner className='projects-spinner' animation="border"></Spinner>
             }
