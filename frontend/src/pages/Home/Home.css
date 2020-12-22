@@ -12,7 +12,7 @@
 }
 
 .scroll-menu-arrow:hover {
-    color: var(--arrow-hover-yellow);
+    color: var(--battleship-background);
 }
 
 .project-item {

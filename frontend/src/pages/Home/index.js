@@ -17,7 +17,7 @@ const Home = () => {
                 const data = await getAllProjects();
                 for (const project of data) {
                     try {
-                        project.languages = await getProjectLanguages(project.name);
+                        project.languages = await getProjectLanguages(project.name);                          
                         project.readme = await getProjectReadme(project.name);
                     } catch (e) { }
                 }
